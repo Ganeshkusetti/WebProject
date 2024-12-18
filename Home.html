@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="shortcut icon" href="logo2.jpg" type="image/x-icon">
+    <title>gkMarriages</title>
+    <style>
+        :root{
+      --primary-color: #3d5cb8;
+      --primary-color-dark: #334c99;
+      --text-dark: #0f172a;
+      --text-light: #64748b;
+      --extra-light: #f1f5f9;
+      --white: #ffffff;
+      --max-width: 1200px; 
+  }
+  
+        .title-i-logo{
+          width: 32%;
+          float: left;
+        }
+
+    .home {
+        background: url('BG5 for Home.jpg') no-repeat center center/cover;
+        background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 50px;
+      margin-top: 5rem;
+    }
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+    }
+
+    .sg{
+        font-size: 10px;
+    }
+
+    .btn-custom {
+      background-color: #e91e63;
+      border: none;
+    }
+    .btn-custom:hover {
+      background-color: #d81b60;
+    }
+
+
+    .header-title {
+      color: #e91e63;
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    .sub-title {
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .hero{
+        background-image: url(BG\ for\ Posters2.jpg);
+    }
+
+    .section-title {
+            color: #e00073;
+            font-weight: bold;
+        }
+
+        .profile-image {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .list-title {
+          background-image: url(BG\ for\ posters.jpg);
+            border-bottom: 2px solid #6c757d;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .list-items {
+            list-style: none;
+            padding: 0;
+        }
+        .list-items li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .footer {
+    background-color: var(--primary-color);
+    margin-top: 2rem;
+  }
+  
+  .footer_container {
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr);
+    gap: 5rem;
+  }
+  
+  .footer_col h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
+  }
+
+  .h1{
+    border: none;       
+      height: 5px;         
+      background-color: red;
+  }
+
+  .footer_col h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
+  }
+  
+  .h2{
+    border: none;       
+      height: 5px;         
+      background-color: pink;
+  }
+
+  .h3{
+    border: none;       
+      height: 5px;         
+      background-color: green;
+  }
+
+
+  .footer_col p {
+    color: var(--extra-light);
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    padding-left: 2rem;
+  }
+  
+  .footer_col p:hover {
+    color: var(--white);
+  }
+  .footer_bar {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: 1px solid var(--extra-light);
+  }
+  
+  .footer_bar p {
+    font-size: 0.9rem;
+    color: var(--extra-light);
+  }
+  
+  .socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+  }
+  
+  .socials span {
+    font-size: 1.2rem;
+    color: var(--extra-light);
+  }
+
+  .image-below-title {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .image-below-title img {
+      max-width: 100%;
+      padding: 10px;
+      height: auto;
+      border-radius: 8px;
+      height: 35px;
+    width: 33px;
+    margin-bottom: 13px;
+    text-align: center;
+    float: left;
+    }
+
+  @media (width < 900px) {
+    .footer_container {
+      gap: 2rem;
+    }
+  }
+  @media (width < 600px) {
+    .footer_container {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer_bar {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  @media (width < 300px) {
+    .footer_container {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer_bar {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  </style>
+</head>
+<body>
+   <!--Navbar Start-->
+   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <div class="title-i-logo">
+      <h2 class="navbar-brand fs-2 fw-bold">Vizag Matrimony</h2>
+      <b class="fw-bold text-black">by gkMarriages</b>
+    </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">gkMarriages</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active fw-bold"  href="Home.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  fw-medium" href="About.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  fw-medium" href="login.html">LOGIN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  fw-medium" href="Registrer.html">REGISTER</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Navbar End-->
+
+  <div class="container-fluid home">
+    <div>
+        <div class="text-center mb-4">
+            <div class="header-title">gkMarriages</div>
+            <div class="sub-title">Find your match</div>
+        </div>
+        <div class="form-container mx-auto">
+            <h5 class="text-center">JOIN FOR FREE AND FIND YOUR LIFE PARTNER</h5>
+            <form>
+                <div class="row mb-1 align-items-center">
+                    <label for="firstName" class="col-md-4 col-form-label text-md-end">First Name</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                    </div>
+                </div>
+                <div class="row mb-1 align-items-center">
+                    <label for="lastName" class="col-md-4 col-form-label text-md-end">Last Name</label>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                    </div>
+                </div>
+                <div class="row mb-1 align-items-center">
+                    <label class="col-md-4 col-form-label text-md-end">Gender</label>
+                    <div class="col-md-8">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="Male">
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-1 align-items-center">
+                    <label class="col-md-4 col-form-label text-md-end">Date of Birth</label>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col">
+                                <select class="form-select">
+                                    <option>Day</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                    <!-- Day options here -->
+                                </select>
+                            </div>
+                            <div class="col">
+                                <select class="form-select">
+                                    <option>Month</option>
+                                    <option value="1">January</option>
+                                    <option value="02">February</option>
+                                    <option value="03">March</option>
+                                    <option value="04">April</option>
+                                    <option value="05">May</option>
+                                    <option value="06">June</option>
+                                    <option value="07">July</option>
+                                    <option value="08">August</option>
+                                    <option value="09">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                    <!-- Month options here -->
+                                </select>
+                            </div>
+                            <div class="col">
+                                <select class="form-select">
+                                    <option>Year</option>
+                                    <option value="01">2003</option>
+                                    <option value="02">2002</option>
+                                    <option value="03">2001</option>
+                                    <option value="04">2000</option>
+                                    <option value="05">1999</option>
+                                    <option value="06">1998</option>
+                                    <option value="07">1997</option>
+                                    <option value="08">1996</option>
+                                    <option value="09">1995</option>
+                                    <option value="10">1994</option>
+                                    <option value="11">1993</option>
+                                    <option value="12">1992</option>
+                                    <option value="13">1991</option>
+                                    <option value="14">1990</option>
+                                    <option value="15">1989</option>
+                                    <option value="16">1988</option>
+                                    <option value="17">1987</option>
+                                    <option value="18">1986</option>
+                                    <option value="19">1985</option>
+                                    <option value="20">1984</option>
+                                    <option value="21">1983</option>
+                                    <option value="22">1982</option>
+                                    <option value="23">1981</option>
+                                    <option value="24">1980</option>
+                                    <option value="25">1979</option>
+                                    <option value="26">1978</option>
+                                    <option value="27">1977</option>
+                                    <option value="28">1976</option>
+                                    <option value="29">1975</option>
+                                    <option value="30">1974</option>
+                                    <option value="31">1973</option>
+                                    <option value="32">1972</option>
+                                    <option value="33">1971</option>
+                                    <!-- Year options here -->
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-1 align-items-center">
+                    <label for="religion" class="col-md-4 col-form-label text-md-end">Religion</label>
+                    <div class="col-md-8">
+                        <select class="form-select" id="religion">
+                            <option selected>Select Religion</option>
+                            <option value="1">Hindu</option>
+                            <option value="2">Muslim</option>
+                            <option value="3">Christian</option>
+                            <option value="4">Other</option>
+                            <!-- Religion options here -->
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-1 align-items-center">
+                    <label for="motherTongue" class="col-md-4 col-form-label text-md-end">Mother Tongue</label>
+                    <div class="col-md-8">
+                        <select class="form-select" id="motherTongue">
+                            <option selected>Select Mother Tongue</option>
+                            <option value="1">Telugu</option>
+                            <option value="2">Hindi</option>
+                            <option value="3">Urdu</option>
+                            <option value="4">Tamil</option>
+                            <option value="5">Odia</option>
+                            <option value="6">Other</option>
+                            <!-- Mother tongue options here -->
+                        </select>
+                    </div>
+                </div>
+                <hr class="h2">
+                <div class="row mb-1 align-items-center">
+                    <div class="col-md-8 d-flex align-items-center">
+                        <p class="mb-0 sg">
+                            By choosing to continue, you agree to our 
+                            <a href="#" class="text-primary">Terms & Conditions</a> and 
+                            <a href="#" class="text-primary">Privacy Policy</a>.
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-end">
+                        <button type="submit" class="btn btn-custom">Go</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <!-- Landing Poster End -->
+
+  <!--  Poster Start -->
+  <div class="container mt-4 hero">
+    <div class="row mb-4">
+        <!-- First poster -->
+        <div class="col-md-4">
+            <img src="Trusted site-poster.jpg" alt="Wedding Image" class="profile-image" height="75%">
+        </div>
+        <div class="col-md-8">
+            <h2 class="section-title mt-4">Most Trusted Matrimony Site</h2>
+            <p class="fs-5">Welcome to gkMarriages, the first matrimonial site to offer a scientific approach to finding a compatible Life Partner (JeevanSathi). 
+                Exclusive to gkMarriages, our personality matching system will help ensure that your marriage is lasting and fulfilling.
+                Established in 2006 and with thousands of registered members, we are the most advanced marriage bureau operating today. 
+                Include us in your journey.</p>
+        </div>
+
+         <!-- Second poster -->
+        <div class="col-md-8">
+            <h2 class="section-title mt-3" style="color: #334c99;">Free Profile Creation</h2>
+            <p class="fs-5">That's right; there are no fees, charges, or payments required to create your profile on gkMarriages. 
+                Other matrimonial companies charge you an entire month's salary before they allow you to contact their members; 
+                gkMarriages allows you to create your shaadi profile and receive messages from other members for free. 
+                Now that India has a premium, low-cost matchmaking service that is available to everyone, you no longer have an excuse to be single!</p>
+        </div>
+        <div class="col-md-4">
+            <img src="Profile Creation-poster.jpg" alt="Wedding Image" class="profile-image" height="75%">
+        </div>
+
+         <!-- Third poster -->
+        <div class="col-md-4">
+            <img src="Privacy-poster.jpg" alt="Wedding Image" class="profile-image" height="75%">
+        </div>
+        <div class="col-md-8">
+            <h2 class="section-title mt-3" style="color: chartreuse;">Maximum Privacy</h2>
+            <p class="fs-5">We were the first marriage bureau in the world to implement full site-wide encryption. 
+                Although this came at a considerable cost to us, we are dedicated to ensuring your information is as safe as possible. 
+                Without encryption, criminals may eavesdrop on your conversations and potentially steal your identity. 
+                For more information on how encryption protects your privacy, refer to our article on online safety.</p>
+        </div>
+
+         <!-- Fourth poster -->
+        <div class="col-md-8">
+            <h2 class="section-title mt-3" style="color: black;">Verified Phone Numbers</h2>
+            <p class="fs-5">A verified phone number is a requirement to use our Indian matchmaking services. 
+                This guarantees the quality of our profiles and ensures the safety of our members. 
+                gkMarriages is the only free matrimony service featuring one hundred percent human screened profiles and verified contact numbers.
+                Do not risk your safety and privacy by registering with any service that does not verify its members.</p>
+            </div>
+        <div class="col-md-4">
+            <img src="verifiede number-poster.jpg" alt="Wedding Image" class="profile-image" height="75%">
+        </div>
+
+         <!-- Fifth poster -->
+        <div class="col-md-4">
+            <img src="Matching-poster.jpg" alt="Wedding Image" class="profile-image" height="75%">
+        </div>
+        <div class="col-md-8">
+            <h2 class="section-title mt-1" style="color: blueviolet;">Exclusive Matchmaking</h2>
+            <p class="fs-5">Research has established that couples who are also matched on personality have more fulfilling relationships and are more successful. 
+                An individual's personality cannot be judged by their age, religion, or appearance.
+                Even after a brief conversation, it is difficult to determine your compatibility with another person. 
+                The state of being married requires compatible personalities, and our exclusive personality test,
+                developed by registered doctors, will ensure the perfect match.</p>
+        </div>
+
+         <!-- Sixth poster -->
+        <div class="col-md-8">
+            <h2 class="section-title mt-2" style="color: palevioletred;">Indian Relationship Advice</h2>
+            <p class="fs-5">We are more than just an Indian matrimonial bureau; we are an Indian relationship bureau. 
+                The team at gkMarriages includes medical psychologists, and for over a decade, 
+                we have provided relationship counseling to those in need, free of charge. 
+                In addition to one on one counseling, we regularly publish original articles and stories on family, 
+                marriage, weddings, and many other topics.</p>
+            </div>
+        <div class="col-md-4">
+            <img src="Relationship advice-poster.jpg" alt="Wedding Image" class="profile-image" height="75%">
+        </div>
+
+        <!--  seventh Poster -->
+        <div class="col-md-4 mt-4">
+            <img src="Success story-poster.jpg" alt="Wedding Image" class="profile-image" height="75%">
+        </div>
+        <div class="col-md-8">
+            <h2 class="section-title mt-4" style="color: green;">Success Story</h2>
+            <p class="fs-5">My name is Padma and my husband's name is Tavish Swaminathan. 
+                I am now Padma Swaminathan thanks to the team at gkMarriages. 
+                I found Tavish on your matrimony app a month after I had created my profile. 
+                We began talking and organised a meeting with our families. 
+                We married here in Chennai three months later. God bless you and thank you very much gkMarriages.</p>
+        </div>
+    </div>
+  </div>
+
+  <!--  Poster End -->
+
+  <div class="container">
+    <h2 class="text-primary mb-2 fs-2">Popular Matchmaking Sites</h2>
+    <hr class="h1">
+
+    <div class="row ">
+        <!-- Mother Tongue -->
+        <div class="col-md-6 col-lg-4">
+            <div class="list-title">Mother Tongue</div>
+            <ul class="list-items">
+                <li>&#9670;Bengali</li>
+                <li>&#9670;Gujarati</li>
+                <li>&#9670;Hindi</li>
+                <li>&#9670;Kannada</li>
+                <li>&#9670;Malayalam</li>
+                <li>&#9670;Marathi</li>
+                <li>&#9670;Oriya</li>
+                <li>&#9670;Punjabi</li>
+                <li>&#9670;Tamil</li>
+                <li>&#9670;Telugu</li>
+            </ul>
+        </div>
+
+        <!-- State -->
+        <div class="col-md-6 col-lg-4">
+            <div class="list-title">State</div>
+            <ul class="list-items">
+                <li>&#9670;Andhra Pradesh</li>
+                <li>&#9670;Delhi</li>
+                <li>&#9670;Gujarat</li>
+                <li>&#9670;Haryana</li>
+                <li>&#9670;Karnataka</li>
+                <li>&#9670;Kerala</li>
+                <li>&#9670;Madhya Pradesh</li>
+                <li>&#9670;Maharashtra</li>
+                <li>&#9670;Punjab</li>
+                <li>&#9670;Rajasthan</li>
+                <li>&#9670;Tamil Nadu</li>
+                <li>&#9670;Uttar Pradesh</li>
+                <li>&#9670;West Bengal</li>
+            </ul>
+        </div>
+
+        <!-- Religion -->
+        <div class="col-md-6 col-lg-4">
+            <div class="list-title">Religion</div>
+            <ul class="list-items">
+                <li>&#9670;Hindu</li>
+                <li>&#9670;Sikh</li>
+                <li>&#9670;Muslim</li>
+                <li>&#9670;Buddhist</li>
+                <li>&#9670;Christian</li>
+                <li>&#9670;Jain</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <!-- City -->
+        <div class="col-md-6 col-lg-4">
+            <div class="list-title">City</div>
+            <ul class="list-items">
+                <li>&#9670;Ahmedabad</li>
+                <li>&#9670;Bangalore</li>
+                <li>&#9670;Chennai</li>
+                <li>&#9670;Dehradun</li>
+                <li>&#9670;Hyderabad</li>
+                <li>&#9670;Jaipur</li>
+                <li>&#9670;Kolkata</li>
+                <li>&#9670;Lucknow</li>
+                <li>&#9670;Mumbai</li>
+                <li>&#9670;New Delhi</li>
+                <li>&#9670;Pune</li>
+            </ul>
+        </div>
+
+        <!-- Popular -->
+        <div class="col-md-6 col-lg-4">
+            <div class="list-title">Popular</div>
+            <ul class="list-items">
+                <li>&#9670;Agarwal</li>
+                <li>&#9670;Arora</li>
+                <li>&#9670;Baniya</li>
+                <li>&#9670;Brahmin</li>
+                <li>&#9670;Gupta</li>
+                <li>&#9670;Kayastha</li>
+                <li>&#9670;Khatri</li>
+                <li>&#9670;Lingayat</li>
+                <li>&#9670;Mudaliar</li>
+                <li>&#9670;Nair</li>
+                <li>&#9670;Reddy</li>
+                <li>&#9670;Widow</li>
+                <li>&#9670;Yadav</li>
+                <li>&#9670;Vishwakarma</li>
+            </ul>
+        </div>
+
+        <!-- Country -->
+        <div class="col-md-6 col-lg-4">
+            <div class="list-title">Country</div>
+            <ul class="list-items">
+                <li>&#9670;NRI</li>
+                <li>&#9670;Singapore</li>
+                <li>&#9670;Malaysia</li>
+                <li>&#9670;Australia</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+  <!-- Footer Start-->
+  <footer class="footer">
+    <div class="section_container footer_container">
+      <div class="footer_col">
+        <h3>gkMarriages</h3>
+        <hr class="h1">
+        <div class="image-below-title ">
+            <img src="logo2.jpg" alt="About iMarriages Image" class="justify-content-start" style="height: 100px; width: 100px;">
+        </div>
+        <p>
+          gkMarriages.com is a premium matrimony site that allows members to communicate with each other for free. 
+          We know that your privacy is of upmost importance, 
+          which is why iMarriages is the only matrimonial company that has invested in full site wide SSL encryption. 
+          All profiles are manually screened and a valid phone number is required to register. 
+          Our service is free to use for Indians living at home as well as those NRIs living abroad; 
+          whether it's creating a profile, chatting with prospective life partners or asking for advice in our relationship columns, 
+          you will not be charged anything..
+        </p>
+      </div>
+      <div class="footer_col">
+        <h4> Quick Links</h4>
+        <hr class="h2">
+        <p> Kerala Matrimony</p>
+        <p>Malaysia Matrimony</p>
+        <p>USA Matrimony</p>
+        <p>Canada Matrimony</p>
+        <p>Australia Matrimony</p>
+        <p>Telangana Matrimony</p>
+      </div>
+      <div class="footer_col">
+        <h4>INFORMATION</h4>
+        <hr class="h3">
+        <p>About iMarriages</p>
+        <p>Contact Us</p>
+        <p> Help</p>
+        <p>Relationship Advice</p>
+        <p>Privacy Information</p>
+        <p>Terms and Conditions</p>
+      </div>
+    </div>
+    <div class="section_container footer_bar">
+        <p> © 2024 gkMarriages , Inc.</p>
+      <div class="socials">
+        <span><i class="ri-facebook-fill"></i></span>
+        <span><i class="ri-twitter-fill"></i></span>
+        <span><i class="ri-instagram-line"></i></span>
+        <span><i class="ri-youtube-fill"></i></span>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End-->
+  </body>
+  </html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link rel="shortcut icon" href="logo2.jpg" type="image/x-icon">
+    <title>gkMarriages</title>
+    <style>
+      :root{
+    --primary-color: #3d5cb8;
+    --primary-color-dark: #334c99;
+    --text-dark: #0f172a;
+    --text-light: #64748b;
+    --extra-light: #f1f5f9;
+    --white: #ffffff;
+    --max-width: 1200px; 
+}
+
+      .title-i-logo{
+        width: 32%;
+        float: left;
+      }
+
+        .header {
+            background-image: url('index-image.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+            margin-top: 7rem;
+        }
+        .content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .form-select, .btn {
+            margin-top: 10px;
+        }
+
+        .footer {
+    background-color: var(--primary-color);
+    margin-top: 2rem;
+  }
+  
+  .footer_container {
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr);
+    gap: 5rem;
+  }
+  
+  .footer_col h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
+  }
+
+  .h1{
+    border: none;       
+      height: 5px;         
+      background-color: red;
+  }
+
+  .footer_col h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
+  }
+  
+  .h2{
+    border: none;       
+      height: 5px;         
+      background-color: pink;
+  }
+
+  .h3{
+    border: none;       
+      height: 5px;         
+      background-color: green;
+  }
+
+
+  .footer_col p {
+    color: var(--extra-light);
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    padding-left: 2rem;
+  }
+  
+  .footer_col p:hover {
+    color: var(--white);
+  }
+  .footer_bar {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: 1px solid var(--extra-light);
+  }
+  
+  .footer_bar p {
+    font-size: 0.9rem;
+    color: var(--extra-light);
+  }
+  
+  .socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+  }
+  
+  .socials span {
+    font-size: 1.2rem;
+    color: var(--extra-light);
+  }
+
+  .image-below-title {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .image-below-title img {
+      max-width: 100%;
+      padding: 10px;
+      height: auto;
+      border-radius: 8px;
+      height: 35px;
+    width: 33px;
+    margin-bottom: 13px;
+    text-align: center;
+    float: left;
+    }
+
+
+  @media (width < 900px) {
+    .footer_container {
+      gap: 2rem;
+    }
+  }
+  @media (width < 600px) {
+    .footer_container {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer_bar {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  @media (width < 300px) {
+    .footer_container {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer_bar {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  </style>
+</head>
+<body>
+   <!--Navbar Start-->
+   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <div class="title-i-logo">
+      <h2 class="navbar-brand fs-2 fw-bold">Vizag Matrimony</h2>
+      <b class="fw-bold text-black">by gkMarriages</b>
+    </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">gkMarriages</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active fw-medium"  href="Home.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-medium" href="About.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-medium" href="login.html">LOGIN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-medium" href="Registrer.html">REGISTER</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Navbar End-->
+
+  <!--Landing Start-->
+  
+<body>
+  <div class="container header d-flex justify-content-center align-items-center vh-100">
+      <div class="content text-center">
+          <h1 class="mb-4">The most advanced and best value for money <br>
+            Vizag matrimony site.</h1>
+          <form class="row g-3 justify-content-center">
+            <h4 class="row g-3 justify-content-start">Create your free profile</h4>
+              <div class="col-md-3">
+                  <select class="form-select" aria-label="Select Gender">
+                      <option selected>Select Gender</option>
+                      <option value="1">Male</option>
+                      <option value="2">Female</option>
+                  </select>
+              </div>
+              <div class="col-md-3">
+                  <select class="form-select" aria-label="Select Religion">
+                      <option selected>Select Religion</option>
+                      <option value="1">Hindu</option>
+                      <option value="2">Muslim</option>
+                      <option value="3">Christian</option>
+                      <option value="4">Other</option>
+                  </select>
+              </div>
+              <div class="col-md-3">
+                  <select class="form-select" aria-label="Select Mother Tongue">
+                      <option selected>Select Mother Tongue</option>
+                      <option value="1">Telugu</option>
+                      <option value="2">Hindi</option>
+                      <option value="3">Urdu</option>
+                      <option value="4">Tamil</option>
+                      <option value="5">Odia</option>
+                      <option value="6">Other</option>
+                  </select>
+              </div>
+              <div class="col-md-3">
+                  <button type="submit" class="btn btn-danger w-100">Register</button>
+              </div>
+          </form>
+      </div>
+  </div>
+
+  <!--Landing End-->
+
+  <!-- Cards Start -->
+   <!-- First Row -->
+   <div style="background-image: url(BG\ for\ cards.jpg);">
+  <div class="container">
+    <div class="row mt-4">
+      <div class="col-md-4 mb-4">
+        <div class="card" style="height: 35rem;">
+          <img src="Bride1.jpg" height="300vh" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">View Bride FBV7833131</h5>
+            <p class="card-text">28 years/5ft 4 in 163 cm Christian, Born Again , Telugu Hyderabad, Telangana , India <br>
+              "Hello potential life partner! Our mother-tongue is Telugu. Our father employed in the businessperson sector...." </p>
+          </div>
+        </div>
+      </div>
+  <div class="col-md-4 mb-4">
+    <div class="card" style="height: 35rem;">
+      <img src="Bride2.jpg" height="300vh" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">View Bride NTB6505888</h5>
+        <p class="card-text"> 32 years / 5 ft 4 in 163 cm
+          Hindu, Viswabrahmin, Telugu
+          Vijayawada, Andhra Pradesh, India
+          "Greetings life partner! My eating habbits are non vegetarian. I don't like smoking or alcohol. My family's mater..."</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card" style="height: 35rem;">
+      <img src="Bride3.jpg" height="300vh" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">View Bride TLY0073125</h5>
+        <p class="card-text"> 24 years / 5 ft 1 in 155 cm
+          Muslim, Sunni, Urdu
+          Vizag, Andhra Pradesh, India
+          "Hi. Blessed mother living with my children. I prefer non vegetarian food. I am a non smoker and I do not drink e..."" </p>
+      </div>
+    </div>
+  </div>
+  <!-- Second Row -->
+  <div class="col-md-4 mb-4">
+    <div class="card" style="height: 35rem;">
+      <img src="Bride4.jpg" height="300vh" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">View Bride FCK4278828</h5>
+        <p class="card-text"> 32 years / 5 ft 5 in 166 cm
+          Hindu, Kshatriya, Hindi
+          Guntur, Andhra Pradesh, India
+          "I am currently working in IT-BPO sector for US healthcare client as team manager at Hyderabad. I hail from a modera..."</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card" style="height: 35rem;">
+      <img src="Bride5.jpg" height="300vh" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">View Bride FNR3547402</h5>
+        <p class="card-text">30 years / 5 ft 2 in 158 cm
+          Hindu, Mudiraj, Telugu
+          Hyderabad, Telangana, India
+          "I have finished my masters Degree and am currently working from Hpcl office in Revenue department. Our family is mi..."</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card" style="height: 35rem;">
+      <img src="Bride6.jpg" height="300vh" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">View Bride FKL3266662</h5>
+        <p class="card-text"> 35 years / 4 ft 11 in 150 cm
+          Jain, Shwetamber, Marwari
+          Vizag, Andhra Pradesh, India
+          "Living in Hyderabad. I am from a middle class, liberal family. I have 1 sibling who is married. I have completed my..."
+          </p>
+      </div>
+    </div>
+  </div>
+  <!-- Third Row -->
+  <div class="col-md-4 mb-4">
+    <div class="card" style="height: 35rem;">
+      <img src="Groom1.jpg" height="300vh" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">View Groom MQB9270658</h5>
+        <p class="card-text"> 32 years / 5 ft 8 in 173 cm
+          Hindu, Arya Vysya, Telugu
+          Vizag, Andhra Pradesh, India <br>
+          <br>
+          <b>Login to view full profile.</b>
+          </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card" style="height: 35rem;">
+      <img src="Groom2.jpg" height="300vh" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">View Groom GCD4226142</h5>
+        <p class="card-text"> 29 years / 5 ft 6 in 168 cm
+          Muslim, Sunni, Urdu
+          Hyderabad, Telangana, India
+           <br>
+          <br>
+          <b>Login to view full profile.</b>
+          </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card" style="height: 35rem;">
+      <img src="Groom3.jpg" height="300vh" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">View Groom DBC2604461</h5>
+        <p class="card-text"> 36 years / 5 ft 8 in 173 cm
+          Hindu, Reddy, Telugu
+          Kurnol, Andhra Pradesh, India <br>
+          <br>
+          <b>Login to view full profile.</b>
+          </p>
+      </div>
+    </div>
+  </div>
+  <!-- Fourth Row -->
+  <div class="col-md-4 mb-4">
+    <div class="card" style="height: 35rem;">
+      <img src="Groom4.jpg" height="300vh" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">View Groom SDF1086558</h5>
+        <p class="card-text"> 30 years / 5 ft 6 in 168 cm
+          Christian, Other, Telugu
+          Vijayawada, Andhra Pradesh, India <br>
+          <br>
+          <b>Login to view full profile.</b>
+          </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card" style="height: 35rem;">
+      <img src="Groom5.jpg" height="300vh" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">View Groom TFM6549843</h5>
+        <p class="card-text">30 years / 5 ft 8 in 173 cm
+          Hindu, Vishwakarma, Telugu
+          Guntur, Andhra Pradesh, India <br>
+          <br>
+          <b>Login to view full profile.</b>
+          </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-4">
+    <div class="card" style="height: 35rem;">
+      <img src="Groom6.jpg" height="300vh" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"> View Groom JJW6274440</h5>
+        <p class="card-text">36 years / 5 ft 10 in 178 cm
+          Hindu, Padmashali, Telugu
+          Vizag, Andhra Pradesh, India <br>
+          <br>
+          <b>Login to view full profile.</b>
+          </p>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+</div>
+
+<!-- Footer Start-->
+<footer class="footer">
+  <div class="section_container footer_container">
+    <div class="footer_col">
+      <h3>gkMarriages</h3>
+      <hr class="h1">
+      <div class="image-below-title ">
+          <img src="logo2.jpg" alt="About iMarriages Image" class="justify-content-start" style="height: 100px; width: 100px;">
+      </div>
+      <p>
+        gkMarriages.com is a premium matrimony site that allows members to communicate with each other for free. 
+        We know that your privacy is of upmost importance, 
+        which is why iMarriages is the only matrimonial company that has invested in full site wide SSL encryption. 
+        All profiles are manually screened and a valid phone number is required to register. 
+        Our service is free to use for Indians living at home as well as those NRIs living abroad; 
+        whether it's creating a profile, chatting with prospective life partners or asking for advice in our relationship columns, 
+        you will not be charged anything..
+      </p>
+    </div>
+    <div class="footer_col">
+      <h4> Quick Links</h4>
+      <hr class="h2">
+      <p> Kerala Matrimony</p>
+      <p>Malaysia Matrimony</p>
+      <p>USA Matrimony</p>
+      <p>Canada Matrimony</p>
+      <p>Australia Matrimony</p>
+      <p>Telangana Matrimony</p>
+    </div>
+    <div class="footer_col">
+      <h4>INFORMATION</h4>
+      <hr class="h3">
+      <p>About iMarriages</p>
+      <p>Contact Us</p>
+      <p> Help</p>
+      <p>Relationship Advice</p>
+      <p>Privacy Information</p>
+      <p>Terms and Conditions</p>
+    </div>
+  </div>
+  <div class="section_container footer_bar">
+      <p> © 2024 gkMarriages , Inc.</p>
+    <div class="socials">
+      <span><i class="ri-facebook-fill"></i></span>
+      <span><i class="ri-twitter-fill"></i></span>
+      <span><i class="ri-instagram-line"></i></span>
+      <span><i class="ri-youtube-fill"></i></span>
+    </div>
+  </div>
+</footer>
+<!-- Footer End-->
+</body>
+</html>

@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="shortcut icon" href="logo2.jpg" type="image/x-icon">
+    <title>gkMarriages</title>
+    <style>
+        :root{
+      --primary-color: #3d5cb8;
+      --primary-color-dark: #334c99;
+      --text-dark: #0f172a;
+      --text-light: #64748b;
+      --extra-light: #f1f5f9;
+      --white: #ffffff;
+      --max-width: 1200px; 
+  }
+  
+        .title-i-logo{
+          width: 32%;
+          float: left;
+        }
+
+        .banner-img {
+            margin-top: 7rem;
+            width: 100%;
+            height: 350px; 
+            object-fit: cover; 
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .step {
+            text-align: center;
+            flex: 1;
+            padding: 10px;
+            font-weight: bold;
+            color: white;
+            background-color: #ff4081;
+            border-radius: 20px;
+            margin-right: 5px;
+        }
+
+        .step.completed {
+            background-color: #4caf50;
+        }
+
+        .step:last-child {
+            margin-right: 0;
+        }
+
+        .form-container {
+          background-color: #fff;
+          border: 1px solid #ddd;
+      color: black;
+      padding: 100px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      margin: 0;
+      border-radius: 8px;
+      max-width: 800px;
+     
+    }
+        .form-container h3 {
+            color: #e91e63;
+            font-weight: bold;
+        }
+
+        .register-section-icon {
+    height: 35px;
+    width: 33px;
+    margin-bottom: 13px;
+    text-align: center;
+    float: left;
+}
+
+.register-section-header {
+    padding-top: 5px;
+    color: #555;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 4px;
+    margin-bottom: 13px;
+    float: left;
+}
+
+.clear{
+    clear: both;
+}
+  
+.btn-primary {
+    background-color: #e91e63;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #d81b60;
+}
+
+        .side-section {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .side-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .feature-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            height: 20vh;
+            width: 20vw;
+            margin-bottom: 15px;
+            margin-left: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #fefefe;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .feature-card i {
+            font-size: 40px;
+            color: #e91e63;
+            margin-bottom: 10px;
+        }
+        .feature-card h6 {
+            font-size: 16px;
+            color: #333;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .footer {
+    background-color: var(--primary-color);
+  }
+  
+  .footer_container {
+    display: grid;
+    grid-template-columns: 2fr repeat(2, 1fr);
+    gap: 5rem;
+  }
+  
+  .footer_col h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
+  }
+
+  .h1{
+    border: none;       
+      height: 5px;         
+      background-color: red;
+  }
+
+  .footer_col h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
+  }
+  
+  .h2{
+    border: none;       
+      height: 5px;         
+      background-color: pink;
+  }
+
+  .h3{
+    border: none;       
+      height: 5px;         
+      background-color: green;
+  }
+
+
+  .footer_col p {
+    color: var(--extra-light);
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    padding-left: 2rem;
+  }
+  
+  .footer_col p:hover {
+    color: var(--white);
+  }
+  .footer_bar {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: 1px solid var(--extra-light);
+  }
+  
+  .footer_bar p {
+    font-size: 0.9rem;
+    color: var(--extra-light);
+  }
+  
+  .socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+  }
+  
+  .socials span {
+    font-size: 1.2rem;
+    color: var(--extra-light);
+  }
+
+  .image-below-title {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .image-below-title img {
+      max-width: 100%;
+      padding: 10px;
+      height: auto;
+      border-radius: 8px;
+      height: 35px;
+    width: 33px;
+    margin-bottom: 13px;
+    text-align: center;
+    float: left;
+    }
+
+  
+  @media (width < 900px) {
+    .footer_container {
+      gap: 2rem;
+    }
+  }
+  @media (width < 600px) {
+    .footer_container {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer_bar {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  @media (width < 300px) {
+    .footer_container {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer_bar {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+    </style>
+</head>
+<body>
+   <!--Navbar Start-->
+   <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <div class="title-i-logo">
+      <h2 class="navbar-brand fs-2 fw-bold">Vizag Matrimony</h2>
+      <b class="fw-bold text-black">by gkMarriages</b>
+    </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">gkMarriages</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link fw-medium"  href="Home.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  fw-medium" href="About.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  fw-medium" href="login.html">LOGIN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  active fw-bold" href="Registrer.html">REGISTER</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Navbar End-->
+
+  <!-- Landing Poster Start -->
+   <img src="Register-image.jpg" alt="" width="100%" class="banner-img">
+
+   <!-- Landing Poster End -->
+
+   <div class="container mt-4">
+    <!-- Step Indicator -->
+    <div class="step-indicator">
+        <div class="step completed">Step 1. Create Account</div>
+        <div class="step">Step 2. Add Contact</div>
+        <div class="step">Step 3. Meet Your Match</div>
+    </div>
+    <!-- Step Indicator End -->
+  
+    <div class="container my-5">
+      <div class="row">
+          <!-- Form Section -->
+          <div class="col-md-8">
+              <div class="form-container">
+                  <h3 class="text-center">Create Your Free Profile In Only 3 Steps</h3>
+                  <hr>
+                  <form>
+                      <div class="register-section-icon">
+                          <img src="register-icon-account.jpg" alt="">
+                      </div>
+                      <div class="register-section-header">Account Details</div>
+                      <div class="clear"></div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="firstName" class="col-md-4 col-form-label">Email Address</label>
+                          <div class="col-md-8">
+                              <input type="text" class="form-control" id="email address" placeholder="Enter your email address">
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="firstName" class="col-md-4 col-form-label">Password</label>
+                          <div class="col-md-8">
+                              <input type="text" class="form-control" id="password" placeholder="Enter your password">
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="firstName" class="col-md-4 col-form-label">First Name</label>
+                          <div class="col-md-8">
+                              <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="lastName" class="col-md-4 col-form-label">Last Name</label>
+                          <div class="col-md-8">
+                              <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label class="col-md-4 col-form-label">Gender</label>
+                          <div class="col-md-8">
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="gender" id="male" value="Male">
+                                  <label class="form-check-label" for="male">Male</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                                  <label class="form-check-label" for="female">Female</label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label class="col-md-4 col-form-label">Date of Birth</label>
+                          <div class="col-md-8">
+                              <div class="row">
+                                  <div class="col">
+                                      <select class="form-select">
+                                          <option>Day</option>
+                                          <option value="01">01</option>
+                                          <option value="02">02</option>
+                                          <option value="03">03</option>
+                                          <option value="04">04</option>
+                                          <option value="05">05</option>
+                                          <option value="06">06</option>
+                                          <option value="07">07</option>
+                                          <option value="08">08</option>
+                                          <option value="09">09</option>
+                                          <option value="10">10</option>
+                                          <option value="11">11</option>
+                                          <option value="12">12</option>
+                                          <option value="13">13</option>
+                                          <option value="14">14</option>
+                                          <option value="15">15</option>
+                                          <option value="16">16</option>
+                                          <option value="17">17</option>
+                                          <option value="18">18</option>
+                                          <option value="19">19</option>
+                                          <option value="20">20</option>
+                                          <option value="21">21</option>
+                                          <option value="22">22</option>
+                                          <option value="23">23</option>
+                                          <option value="24">24</option>
+                                          <option value="25">25</option>
+                                          <option value="26">26</option>
+                                          <option value="27">27</option>
+                                          <option value="28">28</option>
+                                          <option value="29">29</option>
+                                          <option value="30">30</option>
+                                          <option value="31">31</option>
+                                          <!-- Day options here -->
+                                      </select>
+                                  </div>
+                                  <div class="col">
+                                      <select class="form-select">
+                                          <option>Month</option>
+                                          <option value="1">January</option>
+                                          <option value="02">February</option>
+                                          <option value="03">March</option>
+                                          <option value="04">April</option>
+                                          <option value="05">May</option>
+                                          <option value="06">June</option>
+                                          <option value="07">July</option>
+                                          <option value="08">August</option>
+                                          <option value="09">September</option>
+                                          <option value="10">October</option>
+                                          <option value="11">November</option>
+                                          <option value="12">December</option>
+                                          <!-- Month options here -->
+                                      </select>
+                                  </div>
+                                  <div class="col">
+                                      <select class="form-select">
+                                          <option>Year</option>
+                                          <option value="01">2003</option>
+                                          <option value="02">2002</option>
+                                          <option value="03">2001</option>
+                                          <option value="04">2000</option>
+                                          <option value="05">1999</option>
+                                          <option value="06">1998</option>
+                                          <option value="07">1997</option>
+                                          <option value="08">1996</option>
+                                          <option value="09">1995</option>
+                                          <option value="10">1994</option>
+                                          <option value="11">1993</option>
+                                          <option value="12">1992</option>
+                                          <option value="13">1991</option>
+                                          <option value="14">1990</option>
+                                          <option value="15">1989</option>
+                                          <option value="16">1988</option>
+                                          <option value="17">1987</option>
+                                          <option value="18">1986</option>
+                                          <option value="19">1985</option>
+                                          <option value="20">1984</option>
+                                          <option value="21">1983</option>
+                                          <option value="22">1982</option>
+                                          <option value="23">1981</option>
+                                          <option value="24">1980</option>
+                                          <option value="25">1979</option>
+                                          <option value="26">1978</option>
+                                          <option value="27">1977</option>
+                                          <option value="28">1976</option>
+                                          <option value="29">1975</option>
+                                          <option value="30">1974</option>
+                                          <option value="31">1973</option>
+                                          <option value="32">1972</option>
+                                          <option value="33">1971</option>
+                                          <!-- Year options here -->
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="religion" class="col-md-4 col-form-label">Religion</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="religion">
+                                  <option selected>Select Religion</option>
+                                  <option value="1">Hindu</option>
+                                  <option value="2">Muslim</option>
+                                  <option value="3">Christian</option>
+                                  <option value="4">Other</option>
+                                  <!-- Religion options here -->
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="country of birth" class="col-md-4 col-form-label">Country Of Birth</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="country of birth">
+                                  <option selected>Select</option>
+                                  <option value="01">Australia</option>
+                                  <option value="02">Belize</option>
+                                  <option value="03">China</option>
+                                  <option value="04">Denmark</option>
+                                  <option value="05">Egypt</option>
+                                  <option value="06">France</option>
+                                  <option value="07">Germany</option>
+                                  <option value="08">Hungary</option>
+                                  <option value="09">India</option>
+                                  <option value="10">Japan</option>
+                                  <option value="11">Kuwait</option>
+                                  <option value="12">Malaysia</option>
+                                  <option value="13">New Zealand</option>
+                                  <option value="14">	Oman</option>
+                                  <option value="15">Pakistan</option>
+                                  <option value="16">Russia</option>
+                                  <option value="17">Sri Lanka</option>
+                                  <option value="18">	Thailand</option>
+                                  <option value="19">United Kingdom</option>
+                                  <option value="20">United States of America</option>
+                                  <!-- Religion options here -->
+                              </select>
+                          </div>
+                      </div>
+                      <div class="register-section-icon">
+                          <img src="profile-icon-profile.png" alt="">
+                      </div>
+                      <div class="register-section-header">Profile Details</div>
+                      <div class="clear"></div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="height" class="col-md-4 col-form-label">Height</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="height">
+                                  <option selected>Select</option>
+                                  <option value="01">5ft 153cm</option>
+                                  <option value="02">5ft 1in 155cm</option>
+                                  <option value="03">5ft 2in 158cm</option>
+                                  <option value="04">5ft 3in 161cm</option>
+                                  <option value="05">5ft 4in 163cm</option>
+                                  <option value="06">5ft 5in 166cm</option>
+                                  <option value="07">5ft 6in 168cm</option>
+                                  <option value="08">5ft 7in 171cm</option>
+                                  <option value="09">5ft 8in 173cm</option>
+                                  <option value="10">5ft 9in 176cm</option>
+                                  <option value="11">5ft 10in 178cm</option>
+                                  <option value="12">5ft 11in 181cm</option>
+                                  <option value="13">6ft  183cm</option>
+                                  <option value="14">6ft 1in 186cm</option>
+                                  <option value="15">6ft 2in 188cm</option>
+                                  <option value="16">6ft 3in 191cm</option>
+                                  <option value="17">6ft 4in 193cm</option>
+                                  <option value="18">6ft 5in 196cm</option>
+                                  <option value="19">6ft 6in 198cm</option>
+                                  <option value="20">6ft 7in 201cm</option>
+
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="body-type" class="col-md-4 col-form-label">Body Type</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="body-type">
+                                  <option selected>Select</option>
+                                  <option value="1">Slim</option>
+                                  <option value="2">Average</option>
+                                  <option value="3">Athletic</option>
+                                  <option value="4">Heavy</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="complexion" class="col-md-4 col-form-label">Complexion</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="complexion">
+                                  <option selected>Select</option>
+                                  <option value="1">Very Fair</option>
+                                  <option value="2">Fair</option>
+                                  <option value="3">Wheatish</option>
+                                  <option value="4">Dark</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="marital status" class="col-md-4 col-form-label">Marital Status</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="marital status">
+                                  <option selected>Select</option>
+                                  <option value="1">Never Married</option>
+                                  <option value="2">Divorcoed</option>
+                                  <option value="3">Wedowed</option>
+                                  <option value="4">Annulled</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="do you have children" class="col-md-4 col-form-label">Do You Have Children</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="do you have children">
+                                  <option selected>Select</option>
+                                  <option value="1">No</option>
+                                  <option value="2">Yes -Living Together</option>
+                                  <option value="3">Yes -Not Living Together</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="mother tongue" class="col-md-4 col-form-label">Mother Tongue</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="mother tongue">
+                                  <option selected>Select</option>
+                                  <option value="01">Telugu</option>
+                                  <option value="02">Tamil</option>
+                                  <option value="03">Hindi</option>
+                                  <option value="04">English</option>
+                                  <option value="05">Dogri</option>
+                                  <option value="06">Gujarati</option>
+                                  <option value="07">Khasi</option>
+                                  <option value="08">Oriya</option>
+                                  <option value="09">Panjabi</option>
+                                  <option value="10">Other</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="manglik" class="col-md-4 col-form-label">Manglik</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="manglik">
+                                  <option selected>Select</option>
+                                  <option value="1">Yes</option>
+                                  <option value="2">No</option>
+                                  <option value="3">Unsure</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="profile created by" class="col-md-4 col-form-label">Profile Created By</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="profile created by">
+                                  <option selected>Select</option>
+                                  <option value="1">Self</option>
+                                  <option value="2">Siblings</option>
+                                  <option value="3">Parent/Guardian</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="register-section-icon">
+                          <img src="register-icon-habbits.png" alt="">
+                      </div>
+                      <div class="register-section-header">Habits</div>
+                      <div class="clear"></div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="diet" class="col-md-4 col-form-label">Diet</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="diet">
+                                  <option selected>Select</option>
+                                  <option value="1">Non Vegetarian</option>
+                                  <option value="2">Vegetarian</option>
+                                  <option value="3">Vegan</option>
+                                  <option value="4">jain</option>
+                                  <option value="5">Eggetarian</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="smoke" class="col-md-4 col-form-label">Smoke</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="smoke">
+                                  <option selected>Select</option>
+                                  <option value="1">Yes</option>
+                                  <option value="2">Only Socially</option>
+                                  <option value="3">No</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="drink" class="col-md-4 col-form-label">Drink</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="drink">
+                                  <option selected>Select</option>
+                                  <option value="1">Yes</option>
+                                  <option value="2">Only Socially</option>
+                                  <option value="3">No</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="register-section-icon">
+                          <img src="register-icon-education.png" alt="">
+                      </div>
+                      <div class="register-section-header">Education and Career</div>
+                      <div class="clear"></div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="education" class="col-md-4 col-form-label">Education</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="education">
+                                  <option selected>Select</option>
+                                  <option value="1">Less Than High School</option>
+                                  <option value="2">High School</option>
+                                  <option value="3">Trade School</option>
+                                  <option value="4">Diploma</option>
+                                  <option value="5">Associate Degree</option>
+                                  <option value="6">Bachelores</option>
+                                  <option value="7">Honours Degree</option>
+                                  <option value="8">Masters</option>
+                                  <option value="9">Doctorate</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="profession" class="col-md-4 col-form-label">Profession</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="profession">
+                                  <option selected>Select</option>
+                                  <option value="1">Actor/Model</option>
+                                  <option value="2">Agent</option>
+                                  <option value="3">Air Hostess</option>
+                                  <option value="4">Arts</option>
+                                  <option value="5">Civil Services</option>
+                                  <option value="6">Commerce</option>
+                                  <option value="7">Computers/IT</option>
+                                  <option value="8">Doctor</option>
+                                  <option value="9">Education</option>
+                                  <option value="10">Finance</option>
+                                  <option value="11">Government</option>
+                                  <option value="12">Other</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="employment status" class="col-md-4 col-form-label">Employment Status</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="employment status">
+                                  <option selected>Select</option>
+                                  <option value="1">Student</option>
+                                  <option value="2">Part-Time</option>
+                                  <option value="3">Full-Time</option>
+                                  <option value="4">Contract</option>
+                                  <option value="5">Homemaker</option>
+                                  <option value="6">Retired</option>
+                                  <option value="7">Not Employed</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="annual income" class="col-md-4 col-form-label">Annual Income</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="annual income">
+                                  <option selected>Select</option>
+                                  <option value="1">Under RS 1 Lakh</option>
+                                  <option value="2">RS 1 Lakh</option>
+                                  <option value="3">Between RS 1 Lakh TO 5 Lakh</option>
+                                  <option value="4">Between RS 5 Lakh TO 10 Lakh</option>
+                                  <option value="5">Between RS 10 Lakh TO 15 Lakh</option>
+                                  <option value="6">Between RS 15 Lakh TO 20 Lakh</option>
+                                  <option value="7">Between RS 20 Lakh TO 25 Lakh</option>
+                                  <option value="8">Between RS 25 Lakh TO 50 Lakh</option>
+                                  <option value="9">Between RS 50 Lakh TO 1 Crore</option>
+                                  <option value="10">Above 1 Crore</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="register-section-icon">
+                          <img src="register-icon-family.png" alt="">
+                      </div>
+                      <div class="register-section-header">Family Details</div>
+                      <div class="clear"></div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="caste / community" class="col-md-4 col-form-label">Caste / Community</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="caste / community">
+                                  <option selected>Select</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="family values" class="col-md-4 col-form-label">Family Values</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="family values">
+                                  <option selected>Select</option>
+                                  <option value="1">Treditional</option>
+                                  <option value="2">Moderate</option>
+                                  <option value="3">Liberal</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="family status" class="col-md-4 col-form-label">Family Status</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="family status">
+                                  <option selected>Select</option>
+                                  <option value="1">Lower Class</option>
+                                  <option value="2">Middle Class</option>
+                                  <option value="3">Upper Middle Class</option>
+                                  <option value="4">Upper Class</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="father's profession" class="col-md-4 col-form-label">Father's Profession</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="father's profession">
+                                  <option selected>Select</option>
+                                  <option value="1">Actor/Model</option>
+                                  <option value="2">Agent</option>
+                                  <option value="3">Air Hostess</option>
+                                  <option value="4">Arts</option>
+                                  <option value="5">Civil Services</option>
+                                  <option value="6">Commerce</option>
+                                  <option value="7">Computers/IT</option>
+                                  <option value="8">Doctor</option>
+                                  <option value="9">Education</option>
+                                  <option value="10">Finance</option>
+                                  <option value="11">Government</option>
+                                  <option value="12">Other</option>
+                                  
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="mother's profession" class="col-md-4 col-form-label">Mother's Profession</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="mother's profession">
+                                  <option selected>Select</option>
+                                  <option value="1">Actor/Model</option>
+                                  <option value="2">Agent</option>
+                                  <option value="3">Air Hostess</option>
+                                  <option value="4">Arts</option>
+                                  <option value="5">Civil Services</option>
+                                  <option value="6">Commerce</option>
+                                  <option value="7">Computers/IT</option>
+                                  <option value="8">Doctor</option>
+                                  <option value="9">Education</option>
+                                  <option value="10">Finance</option>
+                                  <option value="11">Government</option>
+                                  <option value="12">Other</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="number of siblings" class="col-md-4 col-form-label">Number of Siblings</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="number of siblings">
+                                  <option selected>Select</option>
+                                  <option value="1">0</option>
+                                  <option value="2">1</option>
+                                  <option value="3">2</option>
+                                  <option value="4">3</option>
+                                  <option value="5">4</option>
+                                  <option value="6">5</option>
+                                  <option value="7">6</option>
+                                  <option value="8">7</option>
+                                  <option value="9">8</option>
+                                  <option value="10">9</option>
+                                  <option value="11">10</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="register-section-icon">
+                          <img src="register-icon-location.png" alt="">
+                      </div>
+                      <div class="register-section-header">Location</div>
+                      <div class="clear"></div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="country living in" class="col-md-4 col-form-label">Country Living In</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="country living in">
+                                  <option selected>Select</option>
+                                  <option value="01">Australia</option>
+                                  <option value="02">Belize</option>
+                                  <option value="03">China</option>
+                                  <option value="04">Denmark</option>
+                                  <option value="05">Egypt</option>
+                                  <option value="06">France</option>
+                                  <option value="07">Germany</option>
+                                  <option value="08">Hungary</option>
+                                  <option value="09">India</option>
+                                  <option value="10">Japan</option>
+                                  <option value="11">Kuwait</option>
+                                  <option value="12">Malaysia</option>
+                                  <option value="13">New Zealand</option>
+                                  <option value="14">	Oman</option>
+                                  <option value="15">Pakistan</option>
+                                  <option value="16">Russia</option>
+                                  <option value="17">Sri Lanka</option>
+                                  <option value="18">	Thailand</option>
+                                  <option value="19">United Kingdom</option>
+                                  <option value="20">United States of America</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="state living in" class="col-md-4 col-form-label">State Living In</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="state living in">
+                                  <optgroup>
+                                  <option selected>Select</option>
+                                  <option value="01">Andhra Pradesh</option>
+                                  <option value="02">Arunachal Pradesh</option>
+                                  <option value="03">Bihar</option>
+                                  <option value="04">Chhattisgarh</option>
+                                  <option value="05">Goa</option>
+                                  <option value="06">Gujarat</option>
+                                  <option value="07">Haryana</option>
+                                  <option value="08">Himachal Pradesh</option>
+                                  <option value="09">Jharkhand</option>
+                                  <option value="10">Karnataka</option>
+                                  <option value="11">Kerala</option>
+                                  <option value="12">Assam</option>
+                                  <option value="13">Madhya Pradesh</option>
+                                  <option value="14">Maharashtra</option>
+                                  <option value="15">Manipur</option>
+                                  <option value="16">Meghalaya</option>
+                                  <option value="17">Mizoram</option>
+                                  <option value="18">Nagaland</option>
+                                  <option value="19">Odisha</option>
+                                  <option value="20">Punjab</option>
+                                  <option value="21">Rajasthan</option>
+                                  <option value="22">Sikkim</option>
+                                  <option value="23">Tamil Nadu</option>
+                                  <option value="24">Telangana</option>
+                                  <option value="25">Tripura</option>
+                                  <option value="26">Uttarakhand</option>
+                                  <option value="27">Uttar Pradesh</option>
+                                  <option value="28">West Bengal</option>
+                              </optgroup>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="row mb-1 align-items-center">
+                          <label for="city living in" class="col-md-4 col-form-label">City Living In</label>
+                          <div class="col-md-8">
+                              <select class="form-select" id="city living in">
+                                  <optgroup>
+                                  <option selected>Select</option>
+                              </optgroup>
+                              </select>
+                          </div>
+                      </div>
+                      <p class="text-muted fw-medium" style="font-size: 10px;">Ensure all information provided is accurate and true. Profiles containing false names, incorrect date of birth, or other misleading information will be banned.</p>
+
+                      <button type="submit" class="btn btn-primary w-100">Create Free Profile</button>
+                  </form>
+              </div>
+          </div>
+
+    <!-- sidebar start-->
+    <div class="col-md-4 container my-1">
+      <div class="side-section">
+          <h2>Finding a life partner <br>
+              really is this simple!</h2>
+          <div class="feature-card">
+              <i class="bi bi-pencil"></i>
+              <h6>Register Free</h6>
+          </div>
+          <div class="feature-card">
+              <i class="bi bi-search"></i>
+              <h6>Receive Matches</h6>
+          </div>
+          <div class="feature-card">
+              <i class="bi bi-chat"></i>
+              <h6>Connect</h6>
+          </div>
+      </div>
+  </div>
+   <!-- sidebar end-->
+
+  <!-- Footer Start-->
+  <footer class="footer">
+    <div class="section_container footer_container">
+      <div class="footer_col">
+        <h3>gkMarriages</h3>
+        <hr class="h1">
+        <div class="image-below-title ">
+            <img src="logo2.jpg" alt="About iMarriages Image" class="justify-content-start" style="height: 100px; width: 100px;">
+        </div>
+        <p>
+          gkMarriages.com is a premium matrimony site that allows members to communicate with each other for free. 
+          We know that your privacy is of upmost importance, 
+          which is why iMarriages is the only matrimonial company that has invested in full site wide SSL encryption. 
+          All profiles are manually screened and a valid phone number is required to register. 
+          Our service is free to use for Indians living at home as well as those NRIs living abroad; 
+          whether it's creating a profile, chatting with prospective life partners or asking for advice in our relationship columns, 
+          you will not be charged anything..
+        </p>
+      </div>
+      <div class="footer_col">
+        <h4> Quick Links</h4>
+        <hr class="h2">
+        <p> Kerala Matrimony</p>
+        <p>Malaysia Matrimony</p>
+        <p>USA Matrimony</p>
+        <p>Canada Matrimony</p>
+        <p>Australia Matrimony</p>
+        <p>Telangana Matrimony</p>
+      </div>
+      <div class="footer_col">
+        <h4>INFORMATION</h4>
+        <hr class="h3">
+        <p>About iMarriages</p>
+        <p>Contact Us</p>
+        <p> Help</p>
+        <p>Relationship Advice</p>
+        <p>Privacy Information</p>
+        <p>Terms and Conditions</p>
+      </div>
+    </div>
+    <div class="section_container footer_bar">
+        <p> © 2024 gkMarriages , Inc.</p>
+      <div class="socials">
+        <span><i class="ri-facebook-fill"></i></span>
+        <span><i class="ri-twitter-fill"></i></span>
+        <span><i class="ri-instagram-line"></i></span>
+        <span><i class="ri-youtube-fill"></i></span>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End-->
+  </body>
+  </html>
